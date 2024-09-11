@@ -1,0 +1,23 @@
+pre[data-language] {
+	font-size: 2rem;
+	overflow-x: auto;
+	padding: 1rem 0;
+
+	[data-line] {
+		padding: 0 1rem;
+	}
+
+	code {
+		&[data-line-numbers] {
+			counter-reset: line;
+
+			> [data-line]::before {
+				counter-increment: line;
+				content: counter(line) ".";
+
+				margin-right: 2rem;
+				color: gray;
+			}
+		}
+	}
+}
