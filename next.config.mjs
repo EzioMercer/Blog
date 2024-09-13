@@ -14,7 +14,8 @@ import wikiLinkPlugin from 'remark-wiki-link';
 const nextConfig = {
 	output: 'export',
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-	reactStrictMode: true
+	reactStrictMode: true,
+	basePath: "/Blog"
 }
 
 const withMDX = nextMDX({
@@ -30,7 +31,7 @@ const withMDX = nextMDX({
 				wikiLinkPlugin,
 				{
 					pageResolver: (name) => [name.replace(/ /g, '-').toLowerCase()],
-					hrefTemplate: (permalink) => `/${permalink}`,
+					hrefTemplate: (permalink) => `/Blog/${permalink}`,
 					aliasDivider: '|'
 				}
 			]
