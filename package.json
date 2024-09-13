@@ -25,6 +25,7 @@
     "remark-gfm": "^4.0.0",
     "remark-mdx-frontmatter": "^5.0.0",
     "remark-toc": "^9.0.0",
+    "remark-wiki-link": "^2.0.1",
     "sass": "^1.77.8",
     "shiki": "^1.17.0",
     "typescript": "5.5.4"

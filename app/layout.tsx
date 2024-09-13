@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import './_reset.css';
+import './_global.css'
 import './_code-block.scss';
 
 export default function RootLayout({

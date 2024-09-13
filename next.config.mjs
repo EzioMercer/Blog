@@ -6,6 +6,7 @@ import remarkToc from 'remark-toc';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkGfm from 'remark-gfm';
+import wikiLinkPlugin from 'remark-wiki-link';
 
 /**
  * @type {import('next').NextConfig}
@@ -24,7 +25,15 @@ const withMDX = nextMDX({
 			remarkFrontmatter,
 			remarkMdxFrontmatter,
 			remarkToc,
-			remarkGfm
+			remarkGfm,
+			[
+				wikiLinkPlugin,
+				{
+					pageResolver: (name) => [name.replace(/ /g, '-').toLowerCase()],
+					hrefTemplate: (permalink) => `/${permalink}`,
+					aliasDivider: '|'
+				}
+			]
 		],
 		rehypePlugins: [
 			rehypeSlug,
