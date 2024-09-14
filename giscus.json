@@ -2,5 +2,8 @@
   "origins": [
     "https://eziomercer.github.io"
   ],
-  "defaultCommentOrder": "newest"
+  "originsRegex": [
+    "http://localhost:[0-9]+"
+  ],
+  "defaultCommentOrder": "oldest"
 }
