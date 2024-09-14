@@ -3,6 +3,6 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = frontmatter;
 
-export default function Page() {
-	return <Matrix />
-}
+const Page = () => <Matrix />
+
+export default Page;

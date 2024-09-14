@@ -3,12 +3,11 @@ import './_reset.css';
 import './_global.css'
 import './_code-block.scss';
 
-
-export default function RootLayout({
+const RootLayout = ({
 	children
 }: {
 	children: ReactNode
-}) {
+}) => {
 	return (
 		<html lang="en">
 			<body>
@@ -17,3 +16,5 @@ export default function RootLayout({
 		</html>
 	)
 }
+
+export default RootLayout;
