@@ -7,6 +7,7 @@ import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkGfm from 'remark-gfm';
 import wikiLinkPlugin from 'remark-wiki-link';
+import { transformerNotationDiff, transformerNotationErrorLevel } from '@shikijs/transformers';
 
 /**
  * @type {import('next').NextConfig}
@@ -42,7 +43,11 @@ const withMDX = nextMDX({
 			[
 				rehypePrettyCode,
 				{
-					theme: 'github-dark-default'
+					theme: 'github-dark-default',
+					transformers: [
+						transformerNotationDiff(),
+						transformerNotationErrorLevel()
+					]
 				}
 			]
 		]

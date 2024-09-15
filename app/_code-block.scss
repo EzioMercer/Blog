@@ -1,22 +1,25 @@
-pre[data-language] {
-	font-size: 2rem;
-	overflow-x: auto;
-	padding: 1rem 0;
+figure[data-rehype-pretty-code-figure] {
+	margin: 0 16px;
 
-	[data-line] {
-		padding: 0 1rem;
-	}
+	pre[data-language] {
+		overflow-x: auto;
+		padding: 1rem 0;
 
-	code {
-		&[data-line-numbers] {
-			counter-reset: line;
+		[data-line] {
+			padding: 0 1rem;
+		}
 
-			> [data-line]::before {
-				counter-increment: line;
-				content: counter(line) ".";
+		code {
+			&[data-line-numbers] {
+				counter-reset: line;
 
-				margin-right: 2rem;
-				color: gray;
+				> [data-line]::before {
+					counter-increment: line;
+					content: counter(line) ".";
+
+					margin-right: 2rem;
+					color: gray;
+				}
 			}
 		}
 	}

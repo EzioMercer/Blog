@@ -2,13 +2,11 @@
 title: Test
 ---
 
-import Comments from './_components/Comments/Comments';
-
 # Welcome to my MDX page!
 
 ## Contents of my article
 
-## lox
+## test
 
 This is some **bold** and _italics_ text.
 
@@ -22,16 +20,16 @@ Checkout my React component:
 
 # typescript
 
-```ts showLineNumbers title="TESTING THIS SHIT" caption="ANOTHER FUCKING SHIT" /Hello/
-const x: string = 'Hello world';
-let y = 'Hello mama';
+```ts /Hello/4
+const x: string = 'Hello world'; // [!code --]
+let y = 'Hello mama'; // [!code error] // [!code --]
 
-console.log(x + y); // Hello world Hello mama
+console.log(x + ' ' + y); // Hello world Hello mama
 ```
 
 ## javascript
 
-```js showLineNumbers title="TESTING THIS SHIT" caption="ANOTHER FUCKING SHIT" {1,2}#a {3,4}#b
+```js showLineNumbers
 const x = 'Hello world';
 let y = 'Hello mama';
 
@@ -63,5 +61,3 @@ www.x.com
 [[Matrix|Matrices]] in plural form
 
 [[Matrix and math|Matri]]ces in plural form and math
-
-<Comments />
