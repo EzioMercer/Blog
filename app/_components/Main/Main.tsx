@@ -11,7 +11,9 @@ const Main = ({
 	return (
 		<main className={ styles.main }>
 			<Container>
-				{ children }
+				<article>
+					{ children }
+				</article>
 				<Comments />
 			</Container>
 		</main>
