@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import './_reset.css';
-import './_colors.css';
+import './_css-variables/variables.css';
 import './_global.css';
 import './_code-block.scss';
 import Footer from './_components/Footer/Footer';

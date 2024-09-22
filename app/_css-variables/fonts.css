@@ -1,0 +1,4 @@
+html {
+	--sans-serif: system-ui, ui-sans-serif, sans-serif;
+	--monospace: ui-monospace, monospace;
+}
