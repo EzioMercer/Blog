@@ -2,14 +2,19 @@ figure[data-rehype-pretty-code-figure] {
 	margin: 16px 0;
 
 	pre[data-language] {
-		overflow-x: auto;
+		border-radius: 8px;
 		padding: 1rem 0;
 
+		overflow-x: auto;
+
 		[data-line] {
-			padding: 0 1rem;
+			padding: 2px 16px;
 		}
 
 		code {
+			display: grid;
+			grid-auto-rows: 1fr;
+
 			font-family: var(--monospace);
 
 			&[data-line-numbers] {
@@ -17,10 +22,40 @@ figure[data-rehype-pretty-code-figure] {
 
 				> [data-line]::before {
 					counter-increment: line;
-					content: counter(line) ".";
+					content: counter(line);
 
-					margin-right: 2rem;
+					width: 3ch;
+					margin-right: 16px;
+
+					text-align: end;
 					color: gray;
+				}
+			}
+
+			[data-line] {
+				display: flex;
+				align-items: center;
+
+				&[data-highlighted-line] {
+					background-color: rgba(255, 255, 255, .1);
+				}
+
+				[data-highlighted-chars] {
+					border-radius: 4px;
+					padding: 2px;
+					background-color: rgba(255, 255, 255, .2);
+				}
+
+				&.diff {
+					--opacity: .15;
+
+					&.remove {
+						background-color: rgba(255, 0, 0, var(--opacity));
+					}
+
+					&.add {
+						background-color: rgba(0, 255, 0, var(--opacity));
+					}
 				}
 			}
 		}

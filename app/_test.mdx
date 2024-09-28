@@ -29,23 +29,23 @@ Checkout my React component:
 
 # typescript
 
-```ts /Hello/4
+```ts /Hello/1,2
 const x: string = 'Hello world'; // [!code --]
 let y = 'Hello mama'; // [!code error] // [!code --]
+
 
 console.log(x + ' ' + y); // Hello world Hello mama
 ```
 
 ## javascript
 
-```js showLineNumbers
+```js showLineNumbers{97} {1}
 const x = 'Hello world';
-let y = 'Hello mama';
+let y = 'Hello mama'; // [!code --]
 
+var z = 5; // [!code ++]
 
-var z = 5;
-
-
+const longText = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`
 
 console.log(x + y); // Hello world Hello mama
 ```
