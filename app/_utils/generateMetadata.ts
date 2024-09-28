@@ -8,12 +8,14 @@ const generateMetadata = (frontmatter: MyMetadata): Metadata => {
 	} = frontmatter;
 
 	const productionLinkPrefix = 'https://EzioMercer.github.io';
+	const blogPrefix = `${productionLinkPrefix}/Blog`;
 
 	return {
 		...frontmatter,
 		title: `${title} | EzioMercer`,
 		metadataBase: new URL(productionLinkPrefix),
 		openGraph: {
+			url: blogPrefix,
 			title: title as string,
 			description: description as string,
 			type: 'article',
@@ -22,7 +24,7 @@ const generateMetadata = (frontmatter: MyMetadata): Metadata => {
 			tags: frontmatter.tags.split(', ')
 		},
 		other: {
-			'giscus:backlink': `${productionLinkPrefix}/Blog/${title}`
+			'giscus:backlink': `${blogPrefix}/${title}`
 		}
 	}
 }
