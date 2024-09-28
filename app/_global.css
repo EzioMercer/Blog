@@ -5,11 +5,7 @@ body {
 
 body {
 	display: grid;
-	grid-template-areas:
-		"header"
-		"main"
-		"footer";
-	grid-template-rows: 80px 1fr 80px;
+	grid-auto-rows: 80px 1fr 80px;
 	grid-template-columns: 100%;
 	gap: 16px;
 
@@ -17,18 +13,6 @@ body {
 	font-size: 1rem;
 	background-color: var(--bg-color);
 	color: var(--text-color);
-}
-
-header {
-	grid-area: header;
-}
-
-main {
-	grid-area: main;
-}
-
-footer {
-	grid-area: footer;
 }
 
 h1 {
