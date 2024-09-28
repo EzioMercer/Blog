@@ -7,12 +7,11 @@ const generateMetadata = (frontmatter: MyMetadata): Metadata => {
 		description,
 	} = frontmatter;
 
-	const productionLinkPrefix = 'https://EzioMercer.github.io/Blog';
+	const productionLinkPrefix = 'https://EzioMercer.github.io/Blog/';
 
 	return {
 		...frontmatter,
 		title: `${title} | EzioMercer`,
-		metadataBase: new URL(productionLinkPrefix),
 		openGraph: {
 			title: title as string,
 			description: description as string,
