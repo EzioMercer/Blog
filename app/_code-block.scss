@@ -18,10 +18,8 @@ figure[data-rehype-pretty-code-figure] {
 			font-family: var(--monospace);
 
 			&[data-line-numbers] {
-				counter-reset: line;
-
 				> [data-line]::before {
-					counter-increment: line;
+					counter-increment: line 1;
 					content: counter(line);
 
 					width: 3ch;

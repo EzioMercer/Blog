@@ -1,4 +1,4 @@
 declare module '*.mdx' {
-	import { Metadata } from 'next';
-	export const frontmatter: Metadata;
+	import { MyMetadata } from './app/_utils/types/MyMetadata';
+	export const frontmatter: MyMetadata;
 }
